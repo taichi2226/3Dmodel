@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     //定義
     private ModelViewerView m_modelviewerview;
+    private ModelViewerRenderer mRenderer;
     private String m_strInitialDir = Environment.getExternalStorageDirectory().getPath();    // 初期フォルダ
 
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
 
         // GLSurfaceViewの取得
+
         m_modelviewerview = findViewById( R.id.glview );
 
     }
@@ -134,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected( MenuItem item )
     {
 
-        m_modelviewerview = findViewById( R.id.glview );
+        m_modelviewerview = (ModelViewerView) findViewById( R.id.glview );
 
         switch( item.getItemId() )
         {
@@ -201,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = intent.getExtras();
             if (null != extras) {
                 File file = (File) extras.getSerializable(FileSelectionActivity.EXTRA_FILE);
-                //m_modelviewerview.loadModelFile(Objects.requireNonNull(file).getPath());
+                m_modelviewerview.loadModelFile(Objects.requireNonNull(file).getPath(), mRenderer);
                 m_strInitialDir = file.getParent();
             }
         }

@@ -15,7 +15,7 @@ public class ModelViewerView extends GLSurfaceView implements GestureDetector.On
     public  OpenGLTrackRenderer.ETrackingMode m_eTrackingMode_1fingerdrag;
 
     // コンストラクタ
-    public ModelViewerView( Context context, AttributeSet attrs )
+    public ModelViewerView( Context context, AttributeSet attr )
     {
         super( context );
 
@@ -211,7 +211,7 @@ public class ModelViewerView extends GLSurfaceView implements GestureDetector.On
         return false;
     }
 
-    public void loadModelFile( String strPath )
+    public void loadModelFile( String strPath, ModelViewerRenderer m_renderer )
     {
         Model model = StlFileLoader.load( strPath );
         if( null == model )
