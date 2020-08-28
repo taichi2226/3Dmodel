@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ModelViewerTutorial</string>
+
+    <!-- MainActivity メニュー用 -->
+    <string name="drag_mode">1 Finger Drag…</string>
+    <string name="render_element">Render…</string>
+    <string name="pick_element">Pick…</string>
+    <string name="none">None</string>
+    <string name="rotate">Rotate</string>
+    <string name="pan">Pan</string>
+    <string name="zoom">Zoom</string>
+    <string name="point">Point</string>
+    <string name="line">Line</string>
+    <string name="face">Face</string>
+    <string name="file_open">File Open…</string>
+</resources>

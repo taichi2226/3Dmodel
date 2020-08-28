@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/drag_mode">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menuitem_drag_none"
+                    android:title="@string/none"/>
+                <item
+                    android:id="@+id/menuitem_drag_rotate"
+                    android:title="@string/rotate"/>
+                <item
+                    android:id="@+id/menuitem_drag_pan"
+                    android:title="@string/pan"/>
+                <item
+                    android:id="@+id/menuitem_drag_zoom"
+                    android:title="@string/zoom"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/render_element">
+        <menu>
+            <item
+                android:id="@+id/menuitem_render_point"
+                android:checkable="true"
+                android:title="@string/point"/>
+            <item
+                android:id="@+id/menuitem_render_line"
+                android:checkable="true"
+                android:title="@string/line"/>
+            <item
+                android:id="@+id/menuitem_render_face"
+                android:checkable="true"
+                android:title="@string/face"/>
+        </menu>
+    </item>
+    <item android:title="@string/pick_element">
+        <menu>
+            <item
+                android:id="@+id/menuitem_pick_point"
+                android:checkable="true"
+                android:title="@string/point"/>
+            <item
+                android:id="@+id/menuitem_pick_line"
+                android:checkable="true"
+                android:title="@string/line"/>
+            <item
+                android:id="@+id/menuitem_pick_face"
+                android:checkable="true"
+                android:title="@string/face"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menuitem_file_open"
+        android:title="@string/file_open"/>
+</menu>
